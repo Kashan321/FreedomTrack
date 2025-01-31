@@ -1,16 +1,27 @@
-import { useContext, useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
-import { I18nProvider, I18nContext } from './context/i18Context/I18nContext';
-import { useTranslation } from 'react-i18next'; // Use the `useTranslation` hook
-import Home from './components/Home';
+import { I18nProvider } from './context/i18Context/I18nContext';
+import Login from './components/login/Login';
+import Layout from './components/Layout';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
-  // const { t } = useTranslation(); // Use the `useTranslation` hook
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
   return (
     <I18nProvider>
-      <Home />
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          <Route path="/*" element={isAuthenticated ? <Layout /> : <Navigate to="/login" />} />
+        </Routes>
+      </Router>
+      <ToastContainer />
     </I18nProvider>
   );
 }
