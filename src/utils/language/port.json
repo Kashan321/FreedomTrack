@@ -1,14 +1,12 @@
 {
-    "title": "Olá",
-    "name": "Paquistão",
-    "User Management": "Gestão de Usuários",
-    "Affiliate Tracking": "Rastreamento de Afiliados",
-    "Ad Platform Integration": "Integração da Plataforma de Anúncios",
-    "Subscription Management": "Gestão de Assinaturas",
-    "Security and Fraud Prevention": "Segurança e Prevenção de Fraudes",
-    "Conversion Tracking on iOS": "Rastreamento de Conversões no iOS",
-    "API Integration": "Integração de API",
-    "Page Analyzer AI": "Analisador de Página AI",
-    "Interface Customization": "Customização de Interface",
-    "Logout": "Sair"
+  "title": "Olá",
+  "name": "Paquistão",
+  "Sales": "Vendas",
+  "Traffic": "Tráfego",
+  "Refunds": "Reembolsos",
+  "CPC": "CPC",
+  "ROI": "ROI",
+  "CTR": "CTR",
+  "Others": "Outros",
+  "Logout": "Sair"
   }

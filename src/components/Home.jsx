@@ -1,22 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from './navbar/Navbar';
 import Sidebar from './dashboard/dashboardSidebar/Sidebar';
+import Sales from './dashboard/dashboardSidebar/sales/Sales';
+import Traffic from './dashboard/dashboardSidebar/dashboardComponents/trafic/Trafic';
+import Cpc from './dashboard/dashboardSidebar/dashboardComponents/CPC/Cpc';
+import Roi from './dashboard/dashboardSidebar/dashboardComponents/ROI/Roi';
+import Ctr from './dashboard/dashboardSidebar/dashboardComponents/CTR/Ctr';
 
 function Home() {
-    const { t } = useTranslation();
-    return (
-        <div className="h-screen flex flex-col">
-            <Navbar />
-            <div className="flex flex-1">
-                <Sidebar />
-                <div className="flex-1 p-4">
-                    {/* Main content goes here */}
-                    <h1 className="text-2xl font-bold">{t('Welcome to the Dashboard')}</h1>
-                </div>
-            </div>
+  const { t } = useTranslation();
+  const [selectedContent, setSelectedContent] = useState('Welcome to the Dashboard');
+
+  const handleMenuItemClick = (mainItem, subItem) => {
+    setSelectedContent(`${mainItem} - ${subItem}`);
+  };
+
+  const renderContent = () => {
+    if (selectedContent.startsWith('Sales')) {
+      return <Sales />;
+    }else if (selectedContent.startsWith('Traffic')) {
+      return <Traffic />;
+    }else if (selectedContent.startsWith('CPC')) {
+        return <Cpc />;
+      }else if (selectedContent.startsWith('ROI')) {
+        return <Roi />;
+      }else if (selectedContent.startsWith('CTR')) {
+        return <Ctr />;
+      }
+
+
+    // Add other conditions here for different components
+    return <h1 className="text-2xl font-bold">{t(selectedContent)}</h1>;
+  };
+
+  return (
+    <div className="h-screen flex flex-col">
+      <Navbar />
+      <div className="flex flex-1 overflow-hidden">
+        <Sidebar onMenuItemClick={handleMenuItemClick} />
+        <div className="flex-1 p-4 overflow-y-auto">
+          {renderContent()}
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default Home;

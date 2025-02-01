@@ -1,14 +1,12 @@
 {
     "title": "Hello",
     "name": "pakistan",
-    "User Management": "User Management",
-    "Affiliate Tracking": "Affiliate Tracking",
-    "Ad Platform Integration": "Ad Platform Integration",
-    "Subscription Management": "Subscription Management",
-    "Security and Fraud Prevention": "Security and Fraud ",
-    "Conversion Tracking on iOS": "Conversion Tracking iOS",
-    "API Integration": "API Integration",
-    "Page Analyzer AI": "Page Analyzer AI",
-    "Interface Customization": "Interface Customization",
+    "Sales": "Sales",
+    "Traffic": "Traffic",
+    "Refunds": "Refunds",
+    "CPC ": "CPC",
+    "ROI": "ROI ",
+    "CTR": "CTR",
+    "Others": "Others",
     "Logout": "Logout"
   }

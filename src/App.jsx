@@ -5,6 +5,7 @@ import { I18nProvider } from './context/i18Context/I18nContext';
 import Login from './components/login/Login';
 import Layout from './components/Layout';
 import { ToastContainer } from 'react-toastify';
+import Sales from './components/dashboard/dashboardSidebar/sales/Sales';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
