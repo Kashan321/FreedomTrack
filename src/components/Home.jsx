@@ -7,6 +7,7 @@ import Traffic from './dashboard/dashboardSidebar/dashboardComponents/trafic/Tra
 import Cpc from './dashboard/dashboardSidebar/dashboardComponents/CPC/Cpc';
 import Roi from './dashboard/dashboardSidebar/dashboardComponents/ROI/Roi';
 import Ctr from './dashboard/dashboardSidebar/dashboardComponents/CTR/Ctr';
+import Dashboard from './dashboard/dashboardSidebar/dashboardComponents/dashboard/Dashboard';
 
 function Home() {
   const { t } = useTranslation();
@@ -28,6 +29,9 @@ function Home() {
       }else if (selectedContent.startsWith('CTR')) {
         return <Ctr />;
       }
+      else if (selectedContent.startsWith('Dashboard')) {
+        return <Dashboard />;
+      }
 
 
     // Add other conditions here for different components
@@ -35,7 +39,7 @@ function Home() {
   };
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col bg-gray-200">
       <Navbar />
       <div className="flex flex-1 overflow-hidden">
         <Sidebar onMenuItemClick={handleMenuItemClick} />

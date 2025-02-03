@@ -20,7 +20,7 @@ function Login({ onLogin }) {
     <div className="flex justify-center items-center h-screen bg-white">
       <div className="w-full max-w-sm p-6 bg-gray-600 rounded-lg shadow-md">
         <div className="flex flex-col items-center mb-6">
-          <img src="logo-url" alt="Company Logo" className="w-24 h-24 mb-2" />
+          {/* <img src="logo-url" alt="Company Logo" className="w-24 h-24 mb-2" /> */}
           <h1 className="text-2xl text-white font-bold">FreedomTrack</h1>
         </div>
         <form>
@@ -57,8 +57,8 @@ function Login({ onLogin }) {
               Sign In
             </button>
           </div>
-          <div>
-            <p className='text-white mt-2 text-center'>Create an account</p> 
+          <div className='mt-4 text-center'>
+            <a  className='text-white mt-2 text-center cursor-pointer'>Create an account</a> 
           </div>
         </form>
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaTh, FaFunnelDollar, FaCog, FaBell, FaFilter } from 'react-icons/fa';
+import logo from '../../assets/logo.jpeg';
 
 function Navbar() {
   return (
@@ -7,7 +8,7 @@ function Navbar() {
       <div className="flex items-center space-x-4">
         {/* Logo and Company Title */}
         <div className="flex items-center space-x-2">
-          <img className="w-10 h-10" src="logo-url" alt="Logo" />
+          <img className="w-10 h-10" src={logo} alt="Logo" />
           <span className="text-xl hidden md:block font-bold">FreedomTrack</span>
         </div>
       </div>

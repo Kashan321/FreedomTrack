@@ -6,6 +6,7 @@ import Login from './components/login/Login';
 import Layout from './components/Layout';
 import { ToastContainer } from 'react-toastify';
 import Sales from './components/dashboard/dashboardSidebar/sales/Sales';
+import Signup from './components/Signup/Signup';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -18,6 +19,7 @@ function App() {
     <I18nProvider>
       <Router>
         <Routes>
+          <Route path='/signup' element={<Signup />} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/*" element={isAuthenticated ? <Layout /> : <Navigate to="/login" />} />
         </Routes>
