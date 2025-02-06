@@ -6,7 +6,7 @@ function Expenses() {
   return (
     <div className='rounded-2xl border border-gray-300 h-96'>
       <div className='justify-between flex'>
-        <div className='p-4 flex gap-3'>
+        <div className='p-2 flex gap-3'>
           <div>
             <CiDollar size={30} />
           </div>

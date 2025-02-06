@@ -8,7 +8,7 @@ function Navbar() {
     <div className=" text-white p-4 flex justify-between items-center w-full">
       <div className="flex items-center space-x-4">
         {/* Logo and Company Title */}
-        <div className="flex items-center space-x-2">
+        <div className=" flex items-center space-x-2">
           <img className="w-10 h-10" src={logo} alt="Logo" />
           <span className="text-xl hidden md:block font-bold">FreedomTrack</span>
         </div>
@@ -25,7 +25,10 @@ function Navbar() {
         <div className=" w-8 h-8 bg-gray-400 flex justify-center items-center rounded-full">
           <FaBell className="" />
         </div>
+        <div className=' w-16 h-8 bg-gray-400 flex justify-center items-center rounded-full'>
+
         <img className="rounded-full w-10 h-10" src="profile-pic-url" alt="Profile" />
+        </div>
         
       </div>
     </div>

@@ -9,27 +9,30 @@ import Bestseller from './bestSeller/Bestseller'
 function Dashboard() {
   return (
     <div>
-        <div className='flex gap-4'>
+        <div className='flex flex-col lg:flex-row gap-4'>
 
-        <div className='w-1/2 '>
+        <div className='lg:w-1/2  w-full '>
      <Earningreport/>
     
         </div>
-        <div className='w-1/4'>
+        <div>
+          
+        </div>
+        <div className='lg:w-1/4 w-full'>
         <Balance/>
         </div>
-        <div className='w-1/4'>
+        <div className='lg:w-1/4 w-full'>
             <Expenses/>
         </div>
         </div>
-        <div className='flex gap-4 mt-4'>
-          <div className='w-1/4'>
+        <div className='flex flex-col lg:flex-row gap-4 mt-4'>
+        <div className='lg:w-1/4  w-full '>
             <OrderStat/>
           </div>
-          <div className='w-1/4'>
+          <div className='lg:w-1/4 w-full'>
             <Acquisition/> 
           </div>
-          <div className='w-1/2'>
+          <div className='lg:w-1/2 w-full'>
             <Bestseller/>
           </div>
         </div>

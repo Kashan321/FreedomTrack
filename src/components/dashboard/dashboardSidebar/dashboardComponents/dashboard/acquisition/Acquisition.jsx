@@ -16,13 +16,13 @@ function Acquisition() {
   }));
 
   return (
-    <div className='border rounded-2xl border-gray-300 p-4 h-96'>
+    <div className='border rounded-2xl border-gray-300 p-2 h-96'>
       <div className='justify-between flex '>
-        <div className='p-4 flex gap-3'>
+        <div className='p-2 flex gap-3'>
           <div className='w-8 h-8 rounded-full bg-gray-400 flex justify-center items-center'>
             <FiShoppingCart />
           </div>
-          <div >
+          <div  className='text-sm'>
             <h1>Order Statistics</h1>
             <p className='text-gray-500'>51.04 Total Sales</p>
           </div>

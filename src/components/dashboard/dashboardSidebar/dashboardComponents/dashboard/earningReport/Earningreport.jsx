@@ -30,7 +30,7 @@ function Earningreport() {
   return (
     <div className='bg-white rounded-2xl h-96 '>
       <div className='justify-between flex'>
-        <div className='p-4 flex gap-3'>
+        <div className='p-2 flex gap-3'>
           <div className='h-8 w-8 border rounded-full justify-center items-center flex '>
             <GrLineChart />
           </div>

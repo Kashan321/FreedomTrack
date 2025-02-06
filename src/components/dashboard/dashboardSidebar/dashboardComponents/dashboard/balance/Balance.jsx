@@ -58,7 +58,7 @@ const xLabels = [
   return (
     <div className='rounded-2xl border border-gray-300 h-96 '>
       <div className='justify-between flex'>
-        <div className='p-4 flex gap-3'>
+        <div className='p-2 flex gap-3'>
           <div>
             <CiDollar size={30} />
           </div>
@@ -74,7 +74,7 @@ const xLabels = [
       </div>
 
       <div className='p-4 flex gap-4 justify-center bg-gray-300 border-2 border-dotted m-6 rounded-full border-black'>
-        <div className='flex gap-4'>
+        <div className='flex gap-2 text-sm'>
           <div>
             <LuWallet size={30} />
           </div>
@@ -83,7 +83,7 @@ const xLabels = [
             <p>Wallet</p>
           </div>
         </div>
-        <div className='flex gap-4'>
+        <div className='flex gap-2 text-sm'>
           <div>
             <PiPaypalLogo size={30} />
           </div>
