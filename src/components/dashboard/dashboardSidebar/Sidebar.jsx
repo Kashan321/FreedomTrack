@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { FaChevronDown, FaBars, FaTimes, FaChartLine, FaTrafficLight, FaUndo, FaDollarSign, FaChartPie, FaPercentage, FaEllipsisH, FaSignOutAlt } from 'react-icons/fa';
 import { IoIosAddCircleOutline } from 'react-icons/io';
 import { PiChartDonutLight } from "react-icons/pi";
+import { SiGoogleads, SiGooglemarketingplatform } from "react-icons/si";
 
 function Sidebar({ onMenuItemClick }) {
   const { t } = useTranslation();
@@ -56,7 +57,7 @@ function Sidebar({ onMenuItemClick }) {
                 className={`flex items-center p-2 border-gray-600 rounded hover:bg-gray-700 cursor-pointer ${selectedItem === 2 && hovered ? 'bg-[#82f822f8]' : ''}`}
                 onClick={() => handleDropdownAfiliateMarketing(2, 'Traffic')}
               >
-                <FaTrafficLight className={`mr-2 rounded-2xl ${selectedItem === 2 && !hovered ? 'bg-[#82f822f8] text-black' : ' '}`} size={30} />
+              <SiGooglemarketingplatform  className={`mr-2 rounded-2xl ${selectedItem === 2 && !hovered ? 'bg-[#82f822f8] text-black' : ' '}`} size={30} />
                 {hovered && <button className="w-full text-left">{t('AFFILIATE TRACKING')}</button>}
                 {hovered && <FaChevronDown className={`ml-auto transition-transform ${openDropdown === 2 ? 'transform rotate-180' : ''}`} />}
               </div>
@@ -111,33 +112,29 @@ function Sidebar({ onMenuItemClick }) {
             <li className="mb-2">
               <div
                 className={`flex items-center p-2 border-gray-600 rounded hover:bg-gray-700 cursor-pointer ${selectedItem === 4 && hovered ? 'bg-[#82f822f8]' : ''}`}
-                onClick={() => handleDropdownClick(4, 'CPC')}
+                onClick={() => handleDropdownAfiliateMarketing(4, 'CPC')}
               >
-                <FaDollarSign className={`mr-2 rounded-2xl ${selectedItem === 4 && !hovered ? 'bg-[#82f822f8] text-black' : ' '}`} size={30} />
-                {hovered && <button className="w-full text-left">{t('CPC')}</button>}
-                {hovered && <IoIosAddCircleOutline size={30} />}
+                <SiGoogleads  className={`mr-2 rounded-2xl ${selectedItem === 4 && !hovered ? 'bg-[#82f822f8] text-black' : ' '}`} size={30} />
+                {hovered && <button className="w-full text-left">{t('Google Ads')}</button>}
+                {hovered && <FaChevronDown className={`ml-auto transition-transform ${openDropdown === 4 ? 'transform rotate-180' : ''}`} />}
               </div>
+              {hovered && openDropdown === 4 && (
+                <ul className="mt-2">
+                  <li className="flex items-center p-2 mb-2 border-b border-gray-600 rounded hover:bg-gray-700 cursor-pointer" onClick={() => onMenuItemClick('CPC', 'CPC')}>
+                    <button className="w-full text-left">CPC</button>
+                  </li>
+                  <li className="flex items-center p-2 mb-2 border-b border-gray-600 rounded hover:bg-gray-700 cursor-pointer" onClick={() => onMenuItemClick('CPC', 'CTR')}>
+                    <button className="w-full text-left">CTR</button>
+                  </li>
+                  <li className="flex items-center p-2 mb-2 border-b border-gray-600 rounded hover:bg-gray-700 cursor-pointer" onClick={() => onMenuItemClick('CPC', 'ROI')}>
+                    <button className="w-full text-left">ROI</button>
+                  </li>
+                  
+                </ul>
+              )}
             </li>
-            <li className="mb-2">
-              <div
-                className={`flex items-center p-2 border-gray-600 rounded hover:bg-gray-700 cursor-pointer ${selectedItem === 5 && hovered ? 'bg-[#82f822f8]' : ''}`}
-                onClick={() => handleDropdownClick(5, 'ROI')}
-              >
-                <FaChartPie className={`mr-2 rounded-2xl ${selectedItem === 5 && !hovered ? 'bg-[#82f822f8] text-black' : ' '}`} size={30} />
-                {hovered && <button className="w-full text-left">{t('ROI')}</button>}
-                {hovered && <IoIosAddCircleOutline size={30} />}
-              </div>
-            </li>
-            <li className="mb-2">
-              <div
-                className={`flex items-center p-2 border-gray-600 rounded hover:bg-gray-700 cursor-pointer ${selectedItem === 6 && hovered ? 'bg-[#82f822f8]' : ''}`}
-                onClick={() => handleDropdownClick(6, 'CTR')}
-              >
-                <FaPercentage className={`mr-2 rounded-2xl ${selectedItem === 6 && !hovered ? 'bg-[#82f822f8] text-black' : ' '}`} size={30} />
-                {hovered && <button className="w-full text-left">{t('CTR')}</button>}
-                {hovered && <IoIosAddCircleOutline size={30} />}
-              </div>
-            </li>
+            
+           
             <li className="mb-2">
               <div
                 className={`flex items-center p-2 border-gray-600 rounded hover:bg-gray-700 cursor-pointer ${selectedItem === 7 && hovered ? 'bg-[#82f822f8]' : ''}`}

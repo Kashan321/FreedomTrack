@@ -54,11 +54,11 @@ function Home() {
       return <Adcombo />;
     } else if (selectedContent.startsWith('Traffic - Leadrock')) {
       return <Leadrock />;
-    } else if (selectedContent.startsWith('CPC')) {
+    } else if (selectedContent.startsWith('CPC - CPC')) {
       return <Cpc />;
-    } else if (selectedContent.startsWith('ROI')) {
+    } else if (selectedContent.startsWith('CPC - ROI')) {
       return <Roi />;
-    } else if (selectedContent.startsWith('CTR')) {
+    } else if (selectedContent.startsWith('CPC - CTR')) {
       return <Ctr />;
     } else if (selectedContent.startsWith('Dashboard')) {
       return <Dashboard />;

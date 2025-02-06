@@ -34,6 +34,20 @@ function Sales() {
   const filteredData = data.filter(item => 
     item.customer.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  const getStatusClass = (status) => {
+    switch(status) {
+      case 'Completed':
+        return 'text-green-700';
+      case 'Pending':
+        return 'text-orange-600';
+      case 'Failed':
+        return 'text-red-700';
+      case 'Refunded':
+        return 'text-indigo-500';
+      default:
+        return '';
+    }
+  };
 
   const indexOfLastRow = currentPage * rowsPerPage;
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
@@ -121,7 +135,7 @@ function Sales() {
                 <td className="py-2 px-4">{row.date}</td>
                 <td className="py-2 px-4">{row.customer}</td>
                 <td className="py-2 px-4">{row.payment}</td>
-                <td className="py-2 px-4">{row.status}</td>
+                <td className={`py-2 px-4 ${getStatusClass(row.status)}`}>{row.status}</td>
                 <td className="py-2 px-4">{row.method}</td>
                 <td className="py-2 px-2 flex gap-2">
                   <button className="  p-2 rounded"><RiDeleteBin6Line /></button>
