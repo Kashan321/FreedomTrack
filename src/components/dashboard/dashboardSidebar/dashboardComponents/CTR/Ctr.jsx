@@ -57,24 +57,24 @@ function Ctr() {
       </div>
 
       {/* Factors Affecting CTR */}
-      <div className="mb-8">
+      {/* <div className="mb-8">
         <h2 className="text-xl font-semibold mb-2">Factors Affecting CTR</h2>
         <ul className="list-disc list-inside text-gray-700">
           {factorsAffectingCtr.map((factor, index) => (
             <li key={index}>{factor}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       {/* Tips to Improve CTR */}
-      <div className="mb-8">
+      {/* <div className="mb-8">
         <h2 className="text-xl font-semibold mb-2">Tips to Improve CTR</h2>
         <ul className="list-disc list-inside text-gray-700">
           {tipsToImproveCtr.map((tip, index) => (
             <li key={index}>{tip}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }

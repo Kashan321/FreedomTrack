@@ -57,24 +57,24 @@ function Roi() {
       </div>
 
       {/* Factors Affecting ROI */}
-      <div className="mb-8">
+      {/* <div className="mb-8">
         <h2 className="text-xl font-semibold mb-2">Factors Affecting ROI</h2>
         <ul className="list-disc list-inside text-gray-700">
           {factorsAffectingRoi.map((factor, index) => (
             <li key={index}>{factor}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       {/* Tips to Improve ROI */}
-      <div className="mb-8">
+      {/* <div className="mb-8">
         <h2 className="text-xl font-semibold mb-2">Tips to Improve ROI</h2>
         <ul className="list-disc list-inside text-gray-700">
           {tipsToImproveRoi.map((tip, index) => (
             <li key={index}>{tip}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }

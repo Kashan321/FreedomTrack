@@ -28,7 +28,6 @@ function Cpc() {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">CPC (Cost Per Click) Analysis</h1>
-
       {/* CPC Pricing Details */}
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-2">CPC Pricing Details</h2>
@@ -53,24 +52,24 @@ function Cpc() {
       </div>
 
       {/* Factors Affecting CPC */}
-      <div className="mb-8">
+      {/* <div className="mb-8">
         <h2 className="text-xl font-semibold mb-2">Factors Affecting CPC</h2>
         <ul className="list-disc list-inside text-gray-700">
           {factorsAffectingCpc.map((factor, index) => (
             <li key={index}>{factor}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       {/* Tips to Optimize CPC */}
-      <div className="mb-8">
+      {/* <div className="mb-8">
         <h2 className="text-xl font-semibold mb-2">Tips to Optimize CPC</h2>
         <ul className="list-disc list-inside text-gray-700">
           {tipsToOptimizeCpc.map((tip, index) => (
             <li key={index}>{tip}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -43,7 +43,7 @@ function Bestseller() {
                     <tr className='border-b'>
                         <td className='py-2'>
                             <div className='flex items-center'>
-                                <img src="image_url" alt="product" className='w-8 h-8 mr-2' />
+                                {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
@@ -55,7 +55,7 @@ function Bestseller() {
                     <tr className='border-b'>
                         <td className='py-2'>
                             <div className='flex items-center'>
-                                <img src="image_url" alt="product" className='w-8 h-8 mr-2' />
+                                {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
@@ -67,7 +67,7 @@ function Bestseller() {
                     <tr className='border-b'>
                         <td className='py-2'>
                             <div className='flex items-center'>
-                                <img src="image_url" alt="product" className='w-8 h-8 mr-2' />
+                                {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
@@ -79,7 +79,7 @@ function Bestseller() {
                     <tr className='border-b'>
                         <td className='py-2'>
                             <div className='flex items-center'>
-                                <img src="image_url" alt="product" className='w-8 h-8 mr-2' />
+                                {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
@@ -91,7 +91,7 @@ function Bestseller() {
                     <tr className='border-b'>
                         <td className='py-2'>
                             <div className='flex items-center'>
-                                <img src="image_url" alt="product" className='w-8 h-8 mr-2' />
+                                {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
@@ -103,7 +103,7 @@ function Bestseller() {
                     <tr className='border-b'>
                         <td className='py-2'>
                             <div className='flex items-center'>
-                                <img src="image_url" alt="product" className='w-8 h-8 mr-2' />
+                                {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
