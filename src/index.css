@@ -3,3 +3,7 @@
 body {
   font-family: 'poppins', sans-serif;
 }
+
+.no_scroll::-webkit-scrollbar {
+  display: none;
+ }
