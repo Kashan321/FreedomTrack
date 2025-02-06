@@ -2,6 +2,8 @@ import React from 'react';
 import { FaTh, FaFunnelDollar, FaCog, FaBell, FaFilter } from 'react-icons/fa';
 import logo from '../../assets/logo.jpeg';
 import { CiSearch } from "react-icons/ci";
+import { CgProfile } from "react-icons/cg";
+import { RiArrowDropDownLine } from 'react-icons/ri';
 
 function Navbar() {
   return (
@@ -25,9 +27,11 @@ function Navbar() {
         <div className=" w-8 h-8 bg-gray-400 flex justify-center items-center rounded-full">
           <FaBell className="" />
         </div>
-        <div className=' w-16 h-8 bg-gray-400 flex justify-center items-center rounded-full'>
+        <div className=' w-16 h-8 bg-gray-400 flex justify-between px-2 items-center rounded-full'>
 
-        <img className="rounded-full w-10 h-10" src="profile-pic-url" alt="Profile" />
+        <CgProfile size={20} />
+        <RiArrowDropDownLine size={30} />
+
         </div>
         
       </div>
