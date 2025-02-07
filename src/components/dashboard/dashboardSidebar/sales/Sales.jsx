@@ -4,6 +4,7 @@ import { FaCheckDouble } from "react-icons/fa6";
 import { RiDeleteBin6Line, RiShareForwardLine } from "react-icons/ri";
 import { PiSmileySadDuotone } from "react-icons/pi";
 import { CiMenuKebab } from "react-icons/ci";
+import { useTranslation } from 'react-i18next';
 
 const data = [
   { number: 1, date: '2023-01-01', customer: 'John Doe', payment: '$100', status: 'Pending', method: 'Credit Card' },
@@ -19,6 +20,7 @@ const data = [
 ];
 
 function Sales() {
+   const { t } = useTranslation();
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(7);
   const [searchTerm, setSearchTerm] = useState('');
@@ -61,7 +63,7 @@ function Sales() {
         <div className='h-32 w-72 border rounded-2xl border-gray-300 p-2 flex justify-between'>
           <div className='mt-10'>
             <h1 className='text-4xl font-bold'>65</h1>
-            <p>Pending Payment</p>
+            <p>{t('Pending Payment')}</p>
           </div>
           <div className='h-9 w-9 rounded-xl border border-gray-500 flex justify-center items-center'>
             <MdOutlineAlarm />
@@ -70,7 +72,7 @@ function Sales() {
         <div className='h-32 w-72 border rounded-2xl border-gray-300 p-2 flex justify-between'>
           <div className='mt-10'>
             <h1 className='text-4xl font-bold'>65</h1>
-            <p>Completed</p>
+            <p>{t('Completed')}</p>
           </div>
           <div className='h-9 w-9 rounded-xl border border-gray-500 flex justify-center items-center'>
             <FaCheckDouble />
@@ -79,7 +81,7 @@ function Sales() {
         <div className='h-32 w-72 border rounded-2xl border-gray-300 p-2 flex justify-between'>
           <div className='mt-10'>
             <h1 className='text-4xl font-bold'>65</h1>
-            <p>Refunds</p>
+            <p>{t('Refunds')}</p>
           </div>
           <div className='h-9 w-9 rounded-xl border border-gray-500 flex justify-center items-center'>
             <RiShareForwardLine />
@@ -88,7 +90,7 @@ function Sales() {
         <div className='h-32 w-72 border rounded-2xl border-gray-300 p-2 flex justify-between'>
           <div className='mt-10'>
             <h1 className='text-4xl font-bold'>65</h1>
-            <p>Failed</p>
+            <p>{t('Failed')}</p>
           </div>
           <div className='h-9 w-9 rounded-xl border border-gray-500 flex justify-center items-center'>
             <PiSmileySadDuotone />
@@ -118,13 +120,13 @@ function Sales() {
           <thead className="bg-gray-200 border-b border-dotted">
             <tr>
               <th className='py-2 px-4'><input type="checkbox" /></th>
-              <th className="py-2 px-4">Number</th>
-              <th className="py-2 px-4">Date</th>
-              <th className="py-2 px-4">Customer</th>
-              <th className="py-2 px-4">Payment</th>
-              <th className="py-2 px-4">Status</th>
-              <th className="py-2 px-4">Method</th>
-              <th className="py-2 px-4">Action</th>
+              <th className="py-2 px-4">{t('Number')}</th>
+              <th className="py-2 px-4">{t('Date')}</th>
+              <th className="py-2 px-4">{t('Customer')}</th>
+              <th className="py-2 px-4">{t('payment')}</th>
+              <th className="py-2 px-4">{t('Status')}</th>
+              <th className="py-2 px-4">{t('Method')}</th>
+              <th className="py-2 px-4">{t('Action')}</th>
             </tr>
           </thead>
           <tbody>

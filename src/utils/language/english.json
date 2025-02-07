@@ -8,5 +8,18 @@
     "ROI": "ROI ",
     "CTR": "CTR",
     "Others": "Others",
-    "Logout": "Logout"
+    "Logout": "Logout",
+    "AFFILIATE TRACKING": "AFFILIATE TRACKING",
+    "Google Ads": "Google Ads",
+    "Pending Payments": "Pending Payments",
+    "Completed": "Completed",
+    "Failed": "Failed",
+    "Number": "Number",
+    "Date": "Date",
+    "Amount": "Amount",
+    "Status": "Status",
+    "Action": "Action",
+    "Total": "Total"
+
+    
   }

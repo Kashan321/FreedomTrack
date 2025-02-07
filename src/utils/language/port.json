@@ -8,5 +8,16 @@
   "ROI": "ROI",
   "CTR": "CTR",
   "Others": "Outros",
-  "Logout": "Sair"
-  }
+  "Logout": "Sair",
+  "AFFILIATE TRACKING": "RASTREAMENTO DE AFILIADOS",
+  "Google Ads": "Google Ads",
+  "Pending Payments": "Pagamentos Pendentes",
+  "Completed": "Concluído",
+  "Failed": "Falhou",
+  "Number": "Número",
+  "Date": "Data",
+  "Amount": "Montante",
+  "Status": "Status",
+  "Action": "Ação",
+  "Total": "Total"
+}
