@@ -120,13 +120,13 @@ function Sidebar({ onMenuItemClick }) {
               </div>
               {hovered && openDropdown === 4 && (
                 <ul className="mt-2">
-                  <li className="flex items-center p-2 mb-2 border-b border-gray-600 rounded hover:bg-gray-700 cursor-pointer" onClick={() => onMenuItemClick('CPC', 'CPC')}>
+                  <li className="flex items-center p-2 mb-2 border-b border-gray-600 rounded hover:bg-gray-700 cursor-pointer" onClick={() => onMenuItemClick('Google Ads', 'CPC')}>
                     <button className="w-full text-left">CPC</button>
                   </li>
-                  <li className="flex items-center p-2 mb-2 border-b border-gray-600 rounded hover:bg-gray-700 cursor-pointer" onClick={() => onMenuItemClick('CPC', 'CTR')}>
+                  <li className="flex items-center p-2 mb-2 border-b border-gray-600 rounded hover:bg-gray-700 cursor-pointer" onClick={() => onMenuItemClick('Google Ads', 'CTR')}>
                     <button className="w-full text-left">CTR</button>
                   </li>
-                  <li className="flex items-center p-2 mb-2 border-b border-gray-600 rounded hover:bg-gray-700 cursor-pointer" onClick={() => onMenuItemClick('CPC', 'ROI')}>
+                  <li className="flex items-center p-2 mb-2 border-b border-gray-600 rounded hover:bg-gray-700 cursor-pointer" onClick={() => onMenuItemClick('Google Ads', 'ROI')}>
                     <button className="w-full text-left">ROI</button>
                   </li>
                   

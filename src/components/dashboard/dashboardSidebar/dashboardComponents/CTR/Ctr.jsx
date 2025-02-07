@@ -27,8 +27,6 @@ function Ctr() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">CTR (Click-Through Rate) Analysis</h1>
-
       {/* CTR Details */}
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-2">CTR Details by Ad Group</h2>
@@ -56,25 +54,9 @@ function Ctr() {
         </div>
       </div>
 
-      {/* Factors Affecting CTR */}
-      {/* <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">Factors Affecting CTR</h2>
-        <ul className="list-disc list-inside text-gray-700">
-          {factorsAffectingCtr.map((factor, index) => (
-            <li key={index}>{factor}</li>
-          ))}
-        </ul>
-      </div> */}
-
-      {/* Tips to Improve CTR */}
-      {/* <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">Tips to Improve CTR</h2>
-        <ul className="list-disc list-inside text-gray-700">
-          {tipsToImproveCtr.map((tip, index) => (
-            <li key={index}>{tip}</li>
-          ))}
-        </ul>
-      </div> */}
+      <div>
+      {/* heat map */}
+     </div>
     </div>
   );
 }

@@ -20,13 +20,14 @@ import ClickDealer from './dashboard/dashboardSidebar/dashboardComponents/trafic
 import Adcombo from './dashboard/dashboardSidebar/dashboardComponents/trafic/Adcombo/Adcombo';
 import Leadrock from './dashboard/dashboardSidebar/dashboardComponents/trafic/Leadrock/Leadrock';
 
-
 function Home() {
   const { t } = useTranslation();
   const [selectedContent, setSelectedContent] = useState('Welcome to the Dashboard');
+  const [breadcrumbs, setBreadcrumbs] = useState(['Dashboard']);
 
   const handleMenuItemClick = (mainItem, subItem) => {
     setSelectedContent(`${mainItem} - ${subItem}`);
+    setBreadcrumbs([mainItem, subItem]);
   };
 
   const renderContent = () => {
@@ -37,7 +38,7 @@ function Home() {
     } else if (selectedContent.startsWith('Traffic - BuyGoods')) {
       return <BuyGoods />;
     } else if (selectedContent.startsWith('Traffic - MaxWeb')) {
-      return <MaxWeb/>;
+      return <MaxWeb />;
     } else if (selectedContent.startsWith('Traffic - Digistore24')) {
       return <Digistore24 />;
     } else if (selectedContent.startsWith('Traffic - SellHealth.com')) {
@@ -54,11 +55,11 @@ function Home() {
       return <Adcombo />;
     } else if (selectedContent.startsWith('Traffic - Leadrock')) {
       return <Leadrock />;
-    } else if (selectedContent.startsWith('CPC - CPC')) {
+    } else if (selectedContent.startsWith('Google Ads - CPC')) {
       return <Cpc />;
-    } else if (selectedContent.startsWith('CPC - ROI')) {
+    } else if (selectedContent.startsWith('Google Ads - ROI')) {
       return <Roi />;
-    } else if (selectedContent.startsWith('CPC - CTR')) {
+    } else if (selectedContent.startsWith('Google Ads - CTR')) {
       return <Ctr />;
     } else if (selectedContent.startsWith('Dashboard')) {
       return <Dashboard />;
@@ -70,7 +71,7 @@ function Home() {
 
   return (
     <div className="h-screen flex flex-col bg-gray-200">
-      <Navbar />
+      <Navbar breadcrumbs={breadcrumbs} />
       <div className="flex flex-1 overflow-hidden">
         <Sidebar onMenuItemClick={handleMenuItemClick} />
         <div className="flex-1 p-4 overflow-y-auto">
