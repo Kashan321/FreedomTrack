@@ -13,7 +13,6 @@ function Dashboard() {
 
         <div className='lg:w-1/2  w-full '>
      <Earningreport/>
-    
         </div>
         <div className='lg:w-1/4 w-full'>
         <Balance/>

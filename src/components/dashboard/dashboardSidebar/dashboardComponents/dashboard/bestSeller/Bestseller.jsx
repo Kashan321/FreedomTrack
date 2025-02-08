@@ -26,8 +26,8 @@ function Bestseller() {
             
           </div>
         </div>
-        <div className='p-4 overflow-y-auto h-64'>
-            <table className='w-full border-collapse overflow-y-scroll h-60'>
+        <div className='p-4 overflow-y-auto h-80'>
+            <table className='w-full border-collapse overflow-y-scroll h-72'>
                 <thead >
                     <tr className='border border-gray-400 border-dotted bg-white  '>
                         <th className='text-left px-3  py-2 '>Items</th>
