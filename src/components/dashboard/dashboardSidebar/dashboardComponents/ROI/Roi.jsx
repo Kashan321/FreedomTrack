@@ -32,8 +32,8 @@ function Roi() {
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-2">ROI Details by Campaign</h2>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left text-gray-500">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-200">
+          <table className="w-full text-sm text-left ">
+            <thead className="text-xs  border border-gray-400 uppercase bg-white">
               <tr>
                 <th scope="col" className="px-6 py-3">Campaign</th>
                 <th scope="col" className="px-6 py-3">Cost</th>
@@ -43,7 +43,7 @@ function Roi() {
             </thead>
             <tbody>
               {roiDetails.map((item, index) => (
-                <tr key={index} className="bg-white border-b">
+                <tr key={index} className="bg-white border border-gray-400">
                   <td className="px-6 py-4">{item.campaign}</td>
                   <td className="px-6 py-4">{item.cost}</td>
                   <td className="px-6 py-4">{item.revenue}</td>

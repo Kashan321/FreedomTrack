@@ -31,8 +31,8 @@ function Ctr() {
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-2">CTR Details by Ad Group</h2>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left text-gray-500">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-200">
+          <table className="w-full text-sm text-left ">
+            <thead className="text-xs  border border-gray-400 uppercase bg-white">
               <tr>
                 <th scope="col" className="px-6 py-3">Ad Group</th>
                 <th scope="col" className="px-6 py-3">Clicks</th>
@@ -42,7 +42,7 @@ function Ctr() {
             </thead>
             <tbody>
               {ctrDetails.map((item, index) => (
-                <tr key={index} className="bg-white border-b">
+                <tr key={index} className="bg-white border border-gray-400">
                   <td className="px-6 py-4">{item.adGroup}</td>
                   <td className="px-6 py-4">{item.clicks}</td>
                   <td className="px-6 py-4">{item.impressions}</td>

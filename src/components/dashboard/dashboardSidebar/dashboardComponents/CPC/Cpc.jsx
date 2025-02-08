@@ -1,4 +1,5 @@
 import React from 'react';
+import Heatmap from './Heatmap';
 
 function Cpc() {
   const cpcDetails = [
@@ -31,18 +32,18 @@ function Cpc() {
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-2">CPC Pricing Details</h2>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left text-gray-500">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-200">
+          <table className="w-full text-sm text-left bg-white">
+            <thead className="text-xs text-gray-700 uppercase border border-gray-400 ">
               <tr>
-                <th scope="col" className="px-6 py-3">Keyword</th>
-                <th scope="col" className="px-6 py-3">CPC</th>
+                <th  className="px-6  py-3">Keyword</th>
+                <th  className="px-6  py-3">CPC</th>
               </tr>
             </thead>
             <tbody>
               {cpcDetails.map((item, index) => (
-                <tr key={index} className="bg-white border-b">
-                  <td className="px-6 py-4">{item.keyword}</td>
-                  <td className="px-6 py-4">{item.cpc}</td>
+                <tr key={index} className=" border border-gray-400">
+                  <td className="px-6  py-4">{item.keyword}</td>
+                  <td className="px-6   py-4">{item.cpc}</td>
                 </tr>
               ))}
             </tbody>
@@ -51,7 +52,7 @@ function Cpc() {
       </div>
 
      <div>
-      {/* heat map */}
+     <Heatmap />
      </div>
     </div>
   );
