@@ -27,11 +27,6 @@ function Acquisition() {
             <p className='text-gray-500'>51.04 Total Sales</p>
           </div>
         </div>
-        <div className='p-4 flex gap-3'>
-          <div className='h-8 w-8 rounded-full justify-center items-center flex bg-gray-400'>
-            <CiMenuKebab />
-          </div>
-        </div>
       </div>
       <div className='flex justify-between mt-4'>
         <div className='flex gap-2'>

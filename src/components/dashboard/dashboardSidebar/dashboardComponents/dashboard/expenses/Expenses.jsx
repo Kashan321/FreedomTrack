@@ -15,9 +15,7 @@ function Expenses() {
           </div>
         </div>
         <div className='p-4 flex gap-3'>
-          <div className='h-8 w-8 rounded-full justify-center items-center flex bg-gray-400'>
-            <CiMenuKebab />
-          </div>
+          
         </div>
       </div>
 

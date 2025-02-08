@@ -23,9 +23,7 @@ function Bestseller() {
                 <option>Last year</option>
               </select>
             </div>
-            <div className='h-8 w-8 rounded-full justify-center items-center flex bg-gray-200'>
-              <CiMenuKebab />
-            </div>
+            
           </div>
         </div>
         <div className='p-4 overflow-y-auto h-64'>

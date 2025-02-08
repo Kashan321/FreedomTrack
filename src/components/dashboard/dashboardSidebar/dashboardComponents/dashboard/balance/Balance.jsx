@@ -66,11 +66,7 @@ const xLabels = [
             <h1>Balance</h1>
           </div>
         </div>
-        <div className='p-4 flex gap-3'>
-          <div className='h-8 w-8 rounded-full justify-center items-center flex bg-gray-400'>
-            <CiMenuKebab />
-          </div>
-        </div>
+        
       </div>
 
       <div className='p-4 flex gap-4 justify-center bg-gray-300 border-2 border-dotted m-6 rounded-full border-black'>
