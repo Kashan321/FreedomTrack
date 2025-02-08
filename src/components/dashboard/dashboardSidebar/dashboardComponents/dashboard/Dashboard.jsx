@@ -9,14 +9,11 @@ import Bestseller from './bestSeller/Bestseller'
 function Dashboard() {
   return (
     <div>
-        <div className='flex flex-col lg:flex-row gap-4'>
+        <div className='flex flex-col lg:flex-row gap-2'>
 
         <div className='lg:w-1/2  w-full '>
      <Earningreport/>
     
-        </div>
-        <div>
-          
         </div>
         <div className='lg:w-1/4 w-full'>
         <Balance/>
@@ -25,7 +22,7 @@ function Dashboard() {
             <Expenses/>
         </div>
         </div>
-        <div className='flex flex-col lg:flex-row gap-4 mt-4'>
+        <div className='flex flex-col lg:flex-row gap-2 mt-4'>
         <div className='lg:w-1/4  w-full '>
             <OrderStat/>
           </div>

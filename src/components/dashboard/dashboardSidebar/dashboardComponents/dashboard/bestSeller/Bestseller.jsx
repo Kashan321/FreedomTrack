@@ -28,87 +28,87 @@ function Bestseller() {
         </div>
         <div className='p-4 overflow-y-auto h-64'>
             <table className='w-full border-collapse overflow-y-scroll h-60'>
-                <thead>
-                    <tr className='border-b border-dotted'>
-                        <th className='text-left pb-2'>Items</th>
-                        <th className='text-left pb-2'>Price</th>
-                        <th className='text-left pb-2'>Orders</th>
-                        <th className='text-left pb-2'>Stock</th>
-                        <th className='text-left pb-2'>Amount</th>
+                <thead >
+                    <tr className='border border-gray-400 border-dotted bg-white  '>
+                        <th className='text-left px-3  py-2 '>Items</th>
+                        <th className='text-left px-1 py-2 '>Price</th>
+                        <th className='text-left px-1  py-2'>Orders</th>
+                        <th className='text-left px-1 py-2'>Stock</th>
+                        <th className='text-left px-1 py-2'>Amount</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr className='border-b'>
-                        <td className='py-2'>
+                <tbody className='bg-white '>
+                    <tr className='border border-gray-400'>
+                        <td className='py-2 px-1'>
                             <div className='flex items-center'>
                                 {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
-                        <td className='py-2'>$100</td>
-                        <td className='py-2'>50</td>
-                        <td className='py-2'>20</td>
-                        <td className='py-2'>$2000</td>
+                        <td className='py-2  px-1'>$100</td>
+                        <td className='py-2 px-1'>50</td>
+                        <td className='py-2 px-1'>20</td>
+                        <td className='py-2 px-1'>$2000</td>
                     </tr>
-                    <tr className='border-b'>
-                        <td className='py-2'>
+                    <tr className='border border-gray-400'>
+                        <td className='py-2 px-1'>
                             <div className='flex items-center'>
                                 {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
-                        <td className='py-2'>$100</td>
-                        <td className='py-2'>50</td>
-                        <td className='py-2'>20</td>
-                        <td className='py-2'>$2000</td>
+                        <td className='py-2  px-1'>$100</td>
+                        <td className='py-2 px-1'>50</td>
+                        <td className='py-2 px-1'>20</td>
+                        <td className='py-2 px-1'>$2000</td>
                     </tr>
-                    <tr className='border-b'>
-                        <td className='py-2'>
+                    <tr className='border border-gray-400'>
+                        <td className='py-2 px-1'>
                             <div className='flex items-center'>
                                 {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
-                        <td className='py-2'>$100</td>
-                        <td className='py-2'>50</td>
-                        <td className='py-2'>20</td>
-                        <td className='py-2'>$2000</td>
+                        <td className='py-2  px-1'>$100</td>
+                        <td className='py-2 px-1'>50</td>
+                        <td className='py-2 px-1'>20</td>
+                        <td className='py-2 px-1'>$2000</td>
                     </tr>
-                    <tr className='border-b'>
-                        <td className='py-2'>
+                    <tr className='border border-gray-400'>
+                        <td className='py-2 px-1'>
                             <div className='flex items-center'>
                                 {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
-                        <td className='py-2'>$100</td>
-                        <td className='py-2'>50</td>
-                        <td className='py-2'>20</td>
-                        <td className='py-2'>$2000</td>
+                        <td className='py-2  px-1'>$100</td>
+                        <td className='py-2 px-1'>50</td>
+                        <td className='py-2 px-1'>20</td>
+                        <td className='py-2 px-1'>$2000</td>
                     </tr>
-                    <tr className='border-b'>
-                        <td className='py-2'>
+                    <tr className='border border-gray-400'>
+                        <td className='py-2 px-1'>
                             <div className='flex items-center'>
                                 {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
-                        <td className='py-2'>$100</td>
-                        <td className='py-2'>50</td>
-                        <td className='py-2'>20</td>
-                        <td className='py-2'>$2000</td>
+                        <td className='py-2  px-1'>$100</td>
+                        <td className='py-2 px-1'>50</td>
+                        <td className='py-2 px-1'>20</td>
+                        <td className='py-2 px-1'>$2000</td>
                     </tr>
-                    <tr className='border-b'>
-                        <td className='py-2'>
+                    <tr className='border border-gray-400'>
+                        <td className='py-2 px-1'>
                             <div className='flex items-center'>
                                 {/* <img src="image_url" alt="product" className='w-8 h-8 mr-2' /> */}
                                 <span>Product Name</span>
                             </div>
                         </td>
-                        <td className='py-2'>$100</td>
-                        <td className='py-2'>50</td>
-                        <td className='py-2'>20</td>
-                        <td className='py-2'>$2000</td>
+                        <td className='py-2  px-1'>$100</td>
+                        <td className='py-2 px-1'>50</td>
+                        <td className='py-2 px-1'>20</td>
+                        <td className='py-2 px-1'>$2000</td>
                     </tr>
                 </tbody>
             </table>

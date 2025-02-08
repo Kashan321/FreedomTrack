@@ -15,6 +15,7 @@ function Earningreport() {
         borderColor: '#82f822f8',
         borderWidth: 1,
         borderRadius: 60,
+        
       },
     ],
   };
@@ -50,7 +51,7 @@ function Earningreport() {
           
         </div>
       </div>
-      <div className='p-4 '>
+      <div className='p-4 w-full h-full '>
         <Bar data={data} options={options}/>
       </div>
     </div>

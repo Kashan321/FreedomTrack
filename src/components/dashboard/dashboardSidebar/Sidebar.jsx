@@ -34,7 +34,7 @@ function Sidebar({ onMenuItemClick }) {
 
   return (
     <div className="flex p-6 items-center">
-      <div className={`bg-gray-800 text-white rounded-3xl h-15/16 transition-all duration-300 ${sidebarOpen ? 'w-64 p-2 overflow-y-scroll no_scroll' : 'w-16 pl-1'}`}>
+      <div className={`bg-gray-800 text-white rounded-3xl h-15/16 transition-all duration-300 ${sidebarOpen ? 'w-64 p-2 overflow-y-scroll no_scroll' : 'w-16 '}`}>
         <div className={`flex ${sidebarOpen ? 'justify-end' : 'justify-center'} p-2`}>
           <button className="text-white" onClick={toggleSidebar}>
             {sidebarOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
@@ -44,19 +44,19 @@ function Sidebar({ onMenuItemClick }) {
           <ul>
             <li className="mb-2">
               <div className={`flex items-center justify-center p-2 border-gray-600 rounded hover:bg-[#82f822f8] cursor-pointer ${selectedItem === 0 && sidebarOpen ? 'bg-[#82f822f8]' : ''}`} onClick={() => handleDropdownClick(0, 'Dashboard')}>
-                <PiChartDonutLight className={`mr-2 rounded-2xl ${selectedItem === 0 && !sidebarOpen ? 'bg-[#82f822f8] text-black' : ''}`} size={30} />
+                <PiChartDonutLight className={` rounded-2xl ${selectedItem === 0 && !sidebarOpen ? 'bg-[#82f822f8] text-black' : ''}`} size={30} />
                 {sidebarOpen && <button className="w-full text-left">{t('Dashboard')}</button>}
               </div>
             </li>
             <li className="mb-2">
               <div className={`flex items-center justify-center p-2 border-gray-600 rounded hover:bg-[#82f822f8] cursor-pointer ${selectedItem === 1 && sidebarOpen ? 'bg-[#82f822f8]' : ''}`} onClick={() => handleDropdownClick(1, 'Sales')}>
-                <FaChartLine className={`mr-2 rounded-2xl ${selectedItem === 1 && !sidebarOpen ? 'bg-[#82f822f8] text-black' : ''}`} size={30} />
+                <FaChartLine className={`rounded-2xl ${selectedItem === 1 && !sidebarOpen ? 'bg-[#82f822f8] text-black' : ''}`} size={30} />
                 {sidebarOpen && <button className="w-full text-left">{t('Sales')}</button>}
               </div>
             </li>
             <li className="mb-2">
               <div className={`flex items-center justify-center p-2 border-gray-600 rounded hover:bg-[#82f822f8] cursor-pointer ${selectedItem === 2 && sidebarOpen ? 'bg-[#82f822f8]' : ''}`} onClick={() => handleDropdownAfiliateMarketing(2, 'Traffic')}>
-                <SiGooglemarketingplatform className={`mr-2 rounded-2xl ${selectedItem === 2 && !sidebarOpen ? 'bg-[#82f822f8] text-black' : ''}`} size={30} />
+                <SiGooglemarketingplatform className={` rounded-2xl ${selectedItem === 2 && !sidebarOpen ? 'bg-[#82f822f8] text-black' : ''}`} size={30} />
                 {sidebarOpen && <button className="w-full text-left">{t('AFFILIATE TRACKING')}</button>}
                 {sidebarOpen && (openDropdown === 2 ? <IoIosRemoveCircleOutline size={30} className="ml-auto transition-transform" /> : <IoIosAddCircleOutline size={30} className="ml-auto transition-transform" />)}
               </div>
@@ -100,7 +100,7 @@ function Sidebar({ onMenuItemClick }) {
             </li>
             <li className="mb-2">
               <div className={`flex items-center justify-center p-2 border-gray-600 rounded hover:bg-[#82f822f8] cursor-pointer ${selectedItem === 4 && sidebarOpen ? 'bg-[#82f822f8]' : ''}`} onClick={() => handleDropdownAfiliateMarketing(4, 'CPC')}>
-                <SiGoogleads className={`mr-2 rounded-2xl ${selectedItem === 4 && !sidebarOpen ? 'bg-[#82f822f8] text-black' : ''}`} size={30} />
+                <SiGoogleads className={` rounded-2xl ${selectedItem === 4 && !sidebarOpen ? 'bg-[#82f822f8] text-black' : ''}`} size={30} />
                 {sidebarOpen && <button className="w-full text-left">{t('Google Ads')}</button>}
                 {sidebarOpen && (openDropdown === 4 ? <IoIosRemoveCircleOutline size={30} className="ml-auto transition-transform" /> : <IoIosAddCircleOutline size={30} className="ml-auto transition-transform" />)}
               </div>
@@ -120,7 +120,7 @@ function Sidebar({ onMenuItemClick }) {
             </li>
             <li className="mb-2">
               <div className={`flex items-center justify-center p-2 border-gray-600 rounded hover:bg-[#82f822f8] cursor-pointer ${selectedItem === 8 && sidebarOpen ? 'bg-[#82f822f8]' : ''}`} onClick={() => handleDropdownClick(8, 'Logout')}>
-                <FaSignOutAlt className={`mr-2 rounded-2xl ${selectedItem === 8 && !sidebarOpen ? 'bg-[#82f822f8] text-black' : ''}`} size={30} />
+                <FaSignOutAlt className={` rounded-2xl ${selectedItem === 8 && !sidebarOpen ? 'bg-[#82f822f8] text-black' : ''}`} size={30} />
                 {sidebarOpen && <button className="w-full text-left">{t('Logout')}</button>}
               </div>
             </li>
