@@ -1,8 +1,10 @@
 import React from 'react';
 import { CiDollar, CiMenuKebab } from 'react-icons/ci';
 import { Gauge } from '@mui/x-charts/Gauge';
+import { useTranslation } from 'react-i18next';
 
 function Expenses() {
+  const { t } = useTranslation();
   return (
     <div className='rounded-2xl border border-gray-300 h-96'>
       <div className='justify-between flex'>
@@ -11,7 +13,7 @@ function Expenses() {
             <CiDollar size={30} />
           </div>
           <div>
-            <h1>Expenses</h1>
+            <h1>{t('Expenses')}</h1>
           </div>
         </div>
         <div className='p-4 flex gap-3'>

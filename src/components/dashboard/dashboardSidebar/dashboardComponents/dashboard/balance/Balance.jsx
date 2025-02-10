@@ -10,8 +10,10 @@ import {
   lineElementClasses,
   markElementClasses,
 } from '@mui/x-charts/LineChart';   
+import { useTranslation } from 'react-i18next';
 
 function Balance() {
+   const { t } = useTranslation();
   // Sample data for the line chart
   const data = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June'],
@@ -63,7 +65,7 @@ const xLabels = [
             <CiDollar size={30} />
           </div>
           <div>
-            <h1>Balance</h1>
+            <h1>{t('Balance')}</h1>
           </div>
         </div>
         
@@ -89,9 +91,9 @@ const xLabels = [
           </div>
         </div>
       </div>
-      <div className='px-4'>
+      <div className='px-1'>
       <ChartContainer
-      width={300}
+      width={250}
       height={250}
       series={[{ type: 'line', data: pData }]}
       xAxis={[{ scaleType: 'point', data: xLabels }]}

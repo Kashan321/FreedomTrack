@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Roi() {
+function MetaRoi() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState({
     campaign: '',
@@ -150,4 +150,4 @@ function Roi() {
   );
 }
 
-export default Roi;
+export default MetaRoi;

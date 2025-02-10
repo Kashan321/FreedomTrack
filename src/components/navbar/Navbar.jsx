@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaTh, FaFunnelDollar, FaCog, FaBell, FaFilter } from 'react-icons/fa';
 import logo from '../../assets/logo.jpeg';
 import { CiSearch } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { CiFolderOn } from "react-icons/ci";
+import { useTranslation } from 'react-i18next';
 
 function Navbar({ breadcrumbs }) {
+  const { i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setLanguage(lang);
+  };
+
   return (
     <div className=" text-white p-4 flex justify-between items-center w-full">
       <div className="flex items-center space-x-4">
@@ -28,7 +37,7 @@ function Navbar({ breadcrumbs }) {
         </nav>
       </div>
 
-      {/* User Profile */}
+      {/* User Profile and Language Change */}
       <div className="flex items-center space-x-5">
         <div className="w-8 h-8 bg-gray-400 flex justify-center items-center rounded-full">
           <CiSearch className="" />
@@ -39,6 +48,11 @@ function Navbar({ breadcrumbs }) {
         <div className="w-16 h-8 bg-gray-400 flex justify-between px-2 items-center rounded-full">
           <CgProfile size={20} />
           <RiArrowDropDownLine size={30} />
+        </div>
+        <div className="relative">
+          <button onClick={() => changeLanguage(language === 'en' ? 'pt' : 'en')} className="w-16 h-8 bg-gray-400 flex justify-center items-center rounded-full">
+            {language === 'en' ? 'PT' : 'EN'}
+          </button>
         </div>
       </div>
     </div>

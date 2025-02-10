@@ -19,10 +19,14 @@ import GuruMedia from './dashboard/dashboardSidebar/dashboardComponents/trafic/G
 import ClickDealer from './dashboard/dashboardSidebar/dashboardComponents/trafic/ClickDealer/ClickDealer';
 import Adcombo from './dashboard/dashboardSidebar/dashboardComponents/trafic/Adcombo/Adcombo';
 import Leadrock from './dashboard/dashboardSidebar/dashboardComponents/trafic/Leadrock/Leadrock';
+import MetaCPC from './dashboard/dashboardSidebar/dashboardComponents/Metads/MetaCPC/MetaCPC';
+import MetaCTR from './dashboard/dashboardSidebar/dashboardComponents/Metads/MetaCTR/MetaCTR';
+import MetaRoi from './dashboard/dashboardSidebar/dashboardComponents/Metads/MetaRoi/MetaRoi';
+import CurrencyChanger from './dashboard/dashboardSidebar/dashboardComponents/CurrencyChanger/CurrencyChanger';
 
 function Home() {
   const { t } = useTranslation();
-  const [selectedContent, setSelectedContent] = useState('Welcome to the Dashboard');
+  const [selectedContent, setSelectedContent] = useState('Dashboard');
   const [breadcrumbs, setBreadcrumbs] = useState(['Dashboard']);
 
   const handleMenuItemClick = (mainItem, subItem) => {
@@ -61,7 +65,15 @@ function Home() {
       return <Roi />;
     } else if (selectedContent.startsWith('Google Ads - CTR')) {
       return <Ctr />;
-    } else if (selectedContent.startsWith('Dashboard')) {
+    } else if (selectedContent.startsWith('Meta Ads - CPC')) {
+      return <MetaCPC />;
+    } else if (selectedContent.startsWith('Meta Ads - CTR')) {
+      return <MetaCTR />;
+    }else if (selectedContent.startsWith('Meta Ads - ROI')) {
+      return <MetaRoi />;
+    } else if (selectedContent.startsWith('Currency Changer')) {
+      return <CurrencyChanger />;
+    }  else if (selectedContent.startsWith('Dashboard')) {
       return <Dashboard />;
     }
 

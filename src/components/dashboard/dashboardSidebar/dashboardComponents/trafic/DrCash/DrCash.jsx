@@ -3,8 +3,10 @@ import Form from '../Form/Form';
 import { IoIosAddCircleOutline, IoIosRemoveCircleOutline } from 'react-icons/io';
 import Sale from '../sale/Sale';
 import Refund from '../refund/Refund';
+import { useTranslation } from 'react-i18next';
 
 function DrCash() {
+   const { t } = useTranslation();
    const [openAccordion, setOpenAccordion] = useState(null);
   
     const toggleAccordion = (accordion) => {
@@ -15,8 +17,8 @@ function DrCash() {
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h1 className="text-3xl font-bold mb-6 text-center">DrCash</h1>
         <p className="text-gray-700 mb-4">
-          ClickBank is a global e-commerce platform and affiliate marketplace, providing a way for vendors to sell digital and physical products, and for affiliates to promote them. To integrate with ClickBank, please enter your API key below.
-        </p>
+      {t('bankstate')}
+      </p>
         <div className="flex space-x-4 mb-6">
           <div className="flex-1 transition-transform transform hover:scale-105 shadow-lg hover:shadow-2xl rounded-lg p-4 border border-gray-300 cursor-pointer" onClick={() => toggleAccordion('apiKey')}>
             <div className="flex items-center justify-between">

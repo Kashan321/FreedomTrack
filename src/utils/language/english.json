@@ -19,7 +19,22 @@
     "Amount": "Amount",
     "Status": "Status",
     "Action": "Action",
-    "Total": "Total"
-
-    
+    "Total": "Total",
+    "Currency Changer":"Currency Changer",
+    "Meta Ads": "Meta Ads",
+    "Dashboard" :"Dashboard",
+    "Earning Reports": "Earning Report",
+    "Yearly earning overview":"Yearly earning overview",
+    "year":"year",
+    "Last year": "Last year",
+    "Expenses": "Expenses",
+    "Order Statistics":"Order Statistics",
+    "Total Sales":"Total Sales",
+    "Total Orders":"Total Orders",
+    "Electronics":"Electronics",
+    "Mobile, EarBuds, TV": "Mobile, EarBuds, TV",
+    "Fashion":"Fashion",
+    "Best Seller": "Best Seller",
+    "Balance": "Balance",
+    "bankstate":"ClickBank is a global e-commerce platform and affiliate marketplace, providing a way for vendors to sell digital and physical products, and for affiliates to promote them. To integrate with ClickBank, please enter your API key below."
   }

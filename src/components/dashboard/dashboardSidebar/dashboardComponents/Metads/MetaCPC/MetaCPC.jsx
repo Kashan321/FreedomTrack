@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
+import Heatmap from '../../CPC/Heatmap';
 
-function Roi() {
+
+function MetaCPC() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState({
-    campaign: '',
-    cost: '',
-    revenue: '',
-    roi: ''
+    keyword: '',
+    cpc: ''
   });
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 5;
 
-  const roiDetails = [
-    { campaign: 'Campaign 1', cost: '$500', revenue: '$1500', roi: '200%' },
-    { campaign: 'Campaign 2', cost: '$300', revenue: '$900', roi: '200%' },
-    { campaign: 'Campaign 3', cost: '$700', revenue: '$1400', roi: '100%' },
-    { campaign: 'Campaign 4', cost: '$400', revenue: '$800', roi: '100%' },
-    { campaign: 'Campaign 5', cost: '$600', revenue: '$1800', roi: '200%' },
+  const cpcDetails = [
+    { keyword: 'Digital Marketing', cpc: '$2.50' },
+    { keyword: 'SEO Services', cpc: '$1.75' },
+    { keyword: 'PPC Management', cpc: '$3.00' },
+    { keyword: 'Content Marketing', cpc: '$2.20' },
+    { keyword: 'Social Media Marketing', cpc: '$1.80' },
   ];
 
   const handleSearch = (event) => {
@@ -33,7 +33,7 @@ function Roi() {
     setCurrentPage(1); // Reset to first page on filter change
   };
 
-  const filteredDetails = roiDetails.filter(item => {
+  const filteredDetails = cpcDetails.filter(item => {
     return Object.keys(filters).every(key => {
       return String(item[key]).toLowerCase().includes(filters[key].toLowerCase());
     });
@@ -71,52 +71,30 @@ function Roi() {
 
   return (
     <div className="p-4">
-      {/* ROI Details */}
+      {/* CPC Pricing Details */}
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">ROI Details by Campaign</h2>
+        <h2 className="text-xl font-semibold mb-2">CPC Pricing Details</h2>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left">
-            <thead className="text-xs border border-gray-400 uppercase bg-white">
+          <table className="w-full text-sm text-left bg-white">
+            <thead className="text-xs text-gray-700 uppercase border border-gray-400">
               <tr>
-                <th scope="col" className="px-6 py-3">
-                  Campaign
+                <th className="px-6 py-3">
+                  Keyword
                   <input
                     type="text"
-                    name="campaign"
-                    value={filters.campaign}
+                    name="keyword"
+                    value={filters.keyword}
                     onChange={handleFilterChange}
                     className="p-1 ml-2 border border-gray-400 rounded"
                     placeholder='Search...'
                   />
                 </th>
-                <th scope="col" className="px-6 py-3">
-                  Cost
+                <th className="px-6 py-3">
+                  CPC
                   <input
                     type="text"
-                    name="cost"
-                    value={filters.cost}
-                    onChange={handleFilterChange}
-                    className="p-1 ml-2 border border-gray-400 rounded"
-                    placeholder='Search...'
-                  />
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Revenue
-                  <input
-                    type="text"
-                    name="revenue"
-                    value={filters.revenue}
-                    onChange={handleFilterChange}
-                    className="p-1 ml-2 border border-gray-400 rounded"
-                    placeholder='Search...'
-                  />
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  ROI
-                  <input
-                    type="text"
-                    name="roi"
-                    value={filters.roi}
+                    name="cpc"
+                    value={filters.cpc}
                     onChange={handleFilterChange}
                     className="p-1 ml-2 border border-gray-400 rounded"
                     placeholder='Search...'
@@ -126,11 +104,9 @@ function Roi() {
             </thead>
             <tbody>
               {currentRows.map((item, index) => (
-                <tr key={index} className="bg-white border border-gray-400">
-                  <td className="px-6 py-4">{item.campaign}</td>
-                  <td className="px-6 py-4">{item.cost}</td>
-                  <td className="px-6 py-4">{item.revenue}</td>
-                  <td className="px-6 py-4">{item.roi}</td>
+                <tr key={index} className="border border-gray-400">
+                  <td className="px-6 py-4">{item.keyword}</td>
+                  <td className="px-6 py-4">{item.cpc}</td>
                 </tr>
               ))}
             </tbody>
@@ -144,10 +120,10 @@ function Roi() {
       </div>
 
       <div>
-        {/* heat map */}
+        <Heatmap />
       </div>
     </div>
   );
 }
 
-export default Roi;
+export default MetaCPC;

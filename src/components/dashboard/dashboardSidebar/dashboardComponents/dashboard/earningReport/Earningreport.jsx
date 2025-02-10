@@ -2,8 +2,10 @@ import React from 'react';
 import { GrLineChart } from "react-icons/gr";
 import { CiMenuKebab } from "react-icons/ci";
 import { Bar } from 'react-chartjs-2';
+import { useTranslation } from 'react-i18next';
 
 function Earningreport() {
+  const { t } = useTranslation();
   // Sample data for the bar chart
   const data = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June'],
@@ -36,16 +38,16 @@ function Earningreport() {
             <GrLineChart />
           </div>
           <div>
-            <h1>Earning Reports</h1>
-            <p className='text-gray-300'>Yearly earning overview</p>
+            <h1>{t('Earning Reports')}</h1>
+            <p className='text-gray-300'>{t('Yearly earning overview')}</p>
           </div>
         </div>
         <div className='p-4 flex gap-3'>
           <div className='h-8 w-24 rounded-full justify-center items-center flex bg-gray-200'>
             <select className='border-none'>
-              <option>Year</option>
+              <option>{t('Year')}</option>
               <option>2021</option>
-              <option>Last year</option>
+              <option>{t('Last year')}</option>
             </select>
           </div>
           

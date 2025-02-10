@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 
-function Roi() {
+function MetaCTR() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState({
-    campaign: '',
-    cost: '',
-    revenue: '',
-    roi: ''
+    adGroup: '',
+    clicks: '',
+    impressions: '',
+    ctr: ''
   });
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 5;
 
-  const roiDetails = [
-    { campaign: 'Campaign 1', cost: '$500', revenue: '$1500', roi: '200%' },
-    { campaign: 'Campaign 2', cost: '$300', revenue: '$900', roi: '200%' },
-    { campaign: 'Campaign 3', cost: '$700', revenue: '$1400', roi: '100%' },
-    { campaign: 'Campaign 4', cost: '$400', revenue: '$800', roi: '100%' },
-    { campaign: 'Campaign 5', cost: '$600', revenue: '$1800', roi: '200%' },
+  const ctrDetails = [
+    { adGroup: 'Ad Group 1', clicks: 150, impressions: 3000, ctr: '5%' },
+    { adGroup: 'Ad Group 2', clicks: 200, impressions: 4000, ctr: '5%' },
+    { adGroup: 'Ad Group 3', clicks: 100, impressions: 2500, ctr: '4%' },
+    { adGroup: 'Ad Group 4', clicks: 250, impressions: 5000, ctr: '5%' },
+    { adGroup: 'Ad Group 5', clicks: 180, impressions: 3600, ctr: '5%' },
   ];
 
   const handleSearch = (event) => {
@@ -33,7 +33,7 @@ function Roi() {
     setCurrentPage(1); // Reset to first page on filter change
   };
 
-  const filteredDetails = roiDetails.filter(item => {
+  const filteredDetails = ctrDetails.filter(item => {
     return Object.keys(filters).every(key => {
       return String(item[key]).toLowerCase().includes(filters[key].toLowerCase());
     });
@@ -71,55 +71,58 @@ function Roi() {
 
   return (
     <div className="p-4">
-      {/* ROI Details */}
+      {/* Search Bar */}
+      
+
+      {/* CTR Details */}
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">ROI Details by Campaign</h2>
+        <h2 className="text-xl font-semibold mb-2">CTR Details by Ad Group</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left">
             <thead className="text-xs border border-gray-400 uppercase bg-white">
               <tr>
                 <th scope="col" className="px-6 py-3">
-                  Campaign
+                  Ad Group
                   <input
                     type="text"
-                    name="campaign"
-                    value={filters.campaign}
+                    name="adGroup"
+                    value={filters.adGroup}
                     onChange={handleFilterChange}
                     className="p-1 ml-2 border border-gray-400 rounded"
                     placeholder='Search...'
                   />
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Cost
+                  Clicks
                   <input
                     type="text"
-                    name="cost"
-                    value={filters.cost}
+                    name="clicks"
+                    value={filters.clicks}
                     onChange={handleFilterChange}
                     className="p-1 ml-2 border border-gray-400 rounded"
-                    placeholder='Search...'
+                     placeholder='Search...'
                   />
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Revenue
+                  Impressions
                   <input
                     type="text"
-                    name="revenue"
-                    value={filters.revenue}
+                    name="impressions"
+                    value={filters.impressions}
                     onChange={handleFilterChange}
                     className="p-1 ml-2 border border-gray-400 rounded"
-                    placeholder='Search...'
+                     placeholder='Search...'
                   />
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  ROI
+                  CTR
                   <input
                     type="text"
-                    name="roi"
-                    value={filters.roi}
+                    name="ctr"
+                    value={filters.ctr}
                     onChange={handleFilterChange}
                     className="p-1 ml-2 border border-gray-400 rounded"
-                    placeholder='Search...'
+                     placeholder='Search...'
                   />
                 </th>
               </tr>
@@ -127,10 +130,10 @@ function Roi() {
             <tbody>
               {currentRows.map((item, index) => (
                 <tr key={index} className="bg-white border border-gray-400">
-                  <td className="px-6 py-4">{item.campaign}</td>
-                  <td className="px-6 py-4">{item.cost}</td>
-                  <td className="px-6 py-4">{item.revenue}</td>
-                  <td className="px-6 py-4">{item.roi}</td>
+                  <td className="px-6 py-4">{item.adGroup}</td>
+                  <td className="px-6 py-4">{item.clicks}</td>
+                  <td className="px-6 py-4">{item.impressions}</td>
+                  <td className="px-6 py-4">{item.ctr}</td>
                 </tr>
               ))}
             </tbody>
@@ -150,4 +153,4 @@ function Roi() {
   );
 }
 
-export default Roi;
+export default MetaCTR;

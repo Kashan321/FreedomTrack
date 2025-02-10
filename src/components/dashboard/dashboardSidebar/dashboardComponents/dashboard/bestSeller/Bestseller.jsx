@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import { BsLightningCharge } from "react-icons/bs";
 import { CiMenuKebab } from "react-icons/ci";
 
 function Bestseller() {
+    const { t } = useTranslation();
    return (
       <div className='bg-gray-200 border border-gray-300 rounded-2xl h-96 '>
         <div className='justify-between flex'>
@@ -11,7 +13,7 @@ function Bestseller() {
               <BsLightningCharge />
             </div>
             <div>
-              <h1>Best Seller</h1>
+              <h1>{t('Best Seller')}</h1>
             
             </div>
           </div>

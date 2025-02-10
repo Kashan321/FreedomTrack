@@ -5,7 +5,9 @@ import { Gauge } from '@mui/x-charts/Gauge';
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { IoShirtOutline } from "react-icons/io5";
 import { MdOutlineSportsSoccer } from "react-icons/md";
+import { useTranslation } from 'react-i18next';
 function OrderStat() {
+  const { t } = useTranslation();
   return (
     <div className='border rounded-2xl border-gray-300 p-2 h-96'>
       <div className='justify-between flex '>
@@ -14,8 +16,8 @@ function OrderStat() {
                   <FiShoppingCart  />
                 </div>
                 <div  className='text-sm'>
-                  <h1>Order Statistics</h1>
-                  <p className='text-gray-500'>51.04 Total Sales</p>
+                  <h1>{t("Order Statistics")}</h1>
+                  <p className='text-gray-500'>51.04 {t('Total Sales')}</p>
                 </div>
               </div>
               
@@ -26,7 +28,7 @@ function OrderStat() {
                 </div>
                 <div className='mt-4'>
                     <h1>8,258</h1>
-                    <p className='text-gray-600'>Total Orders</p>
+                    <p className='text-gray-600'>{t('Total Orders')}</p>
                 </div>
             </div>
             <div className='flex justify-between mt-4  text-sm'>
@@ -35,8 +37,8 @@ function OrderStat() {
                     <IoPhonePortraitOutline />
                     </div>
                     <div>
-                        <h1>Electronics</h1>
-                        <p>Mobile, EarBuds, TV</p>
+                        <h1>{t('Electronics')}</h1>
+                        <p>{t('Mobile, EarBuds, TV')}</p>
                     </div>
                 </div>
                 <div>
@@ -49,7 +51,7 @@ function OrderStat() {
                     <IoShirtOutline /> 
                     </div>
                     <div>
-                        <h1>Fashion</h1>
+                        <h1>{t('Fashion')}</h1>
                         <p>T-shirt, Jeans, Shoes</p>
                     </div>
                 </div>
