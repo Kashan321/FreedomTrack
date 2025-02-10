@@ -35,7 +35,12 @@ function Sidebar({ onMenuItemClick }) {
   };
 
   return (
-    <div className="flex p-6 items-center">
+    <div className=" p-6 items-center">
+       {/* <div className={`flex mb-4 ${sidebarOpen ? 'justify-start' : 'justify-start'} p-2 h-6`}>
+          <button className="text-white fixed" onClick={toggleSidebar}>
+            {sidebarOpen ? <FaTimes size={20} className='cursor-pointer ' /> : <FaBars size={20}  className='cursor-pointer'/>}
+          </button>
+        </div> */}
       <div className={`bg-gray-800 text-white rounded-3xl h-15/16 transition-all duration-300 ${sidebarOpen ? 'w-64 p-2 ' : 'w-16 '}`}>
         <div className={`flex ${sidebarOpen ? 'justify-end' : 'justify-center'} p-2 h-6`}>
           <button className="text-white fixed" onClick={toggleSidebar}>
